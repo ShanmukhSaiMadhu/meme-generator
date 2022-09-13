@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  padding: 36px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+Header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 65px;
+  background-color: #FF3CAC;
+  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
   color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-image {
+  height: 100%;
+  margin-right: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-title {
+  font-size: 1.25rem;
+  margin-right: auto;
 }
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 27px;
+  width: 85%;
+  margin: auto;
+  }
+  
+  .form-input1 { 
+    grid-area: 1 / 1 / 2 / 2; 
+
+  }
+  .form-input2 {
+     grid-area: 1 / 2 / 2 / 3; 
+  }
+
+  .form-input1, .form-input2 {
+    font-family: "Karla", sans-serif;
+      border-radius: 5px;
+      border: 1px solid #D5D4D8;
+      text-indent: 5px;
+      padding: 0.5rem;
+      font-size: 1rem;
+  }
+  .form-btn { 
+    grid-area: 2 / 1 / 3 / 3; 
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+.meme {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme-img {
+  
+  max-width: 100%;
+  border-radius: 3px;
+  margin: 2rem;
+}
+
+.meme-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 3rem 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+@media screen and (max-width: 550px) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+    grid-column-gap:20px;
+    grid-row-gap: 20px;
+    width: 100%;
+    margin: auto;
+    }
+    
+    .form-input1 { 
+      grid-area: 1; 
+      font-family: "Karla", sans-serif;
+      border-radius: 5px;
+      border: 1px solid #D5D4D8;
+      text-indent: 5px;
+      padding: 5px;
+    }
+    .form-input2 {
+       grid-area: 2; 
+       font-family: "Karla", sans-serif;
+        border-radius: 5px;
+        border: 1px solid #D5D4D8;
+        text-indent: 5px;
+        padding: 5px;
+  
+    }
+    .form-btn { 
+      grid-area: 3; 
+      font-family: "Karla", sans-serif;
+      border-radius: 5px;
+      background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .meme-text {
+      position: absolute;
+      width: 80%;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 2.5rem 0;
+      padding: 0 5px;
+      font-family: impact, sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: 1px;
+      text-shadow:
+          2px 2px 0 #000,
+          -2px -2px 0 #000,
+          2px -2px 0 #000,
+          -2px 2px 0 #000,
+          0 2px 0 #000,
+          2px 0 0 #000,
+          0 -2px 0 #000,
+          -2px 0 0 #000,
+          2px 2px 5px #000;
+    }
+  
+}
+
