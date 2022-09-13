@@ -59,6 +59,7 @@ Header {
       text-indent: 5px;
       padding: 0.5rem;
       font-size: 1rem;
+      outline: none;
   }
   .form-btn { 
     grid-area: 2 / 1 / 3 / 3; 
@@ -134,20 +135,19 @@ Header {
     
     .form-input1 { 
       grid-area: 1; 
-      font-family: "Karla", sans-serif;
-      border-radius: 5px;
-      border: 1px solid #D5D4D8;
-      text-indent: 5px;
-      padding: 5px;
     }
     .form-input2 {
        grid-area: 2; 
-       font-family: "Karla", sans-serif;
+    }
+
+    .form-input1, .form-input2 {
+      font-family: "Karla", sans-serif;
         border-radius: 5px;
         border: 1px solid #D5D4D8;
         text-indent: 5px;
-        padding: 5px;
-  
+        padding: 0.5rem;
+        font-size: 1rem;
+        outline: none;
     }
     .form-btn { 
       grid-area: 3; 
